@@ -21,6 +21,7 @@ import { WeekView } from './WeekView';
 import { SpecialNodes } from './SpecialNodes';
 import { ProgressTracker } from './ProgressTracker';
 import { StorageControls } from './StorageControls';
+import { Rocket, ChevronRight, Home, Calendar } from 'lucide-react';
 
 
 const nodeTypes = {
@@ -184,34 +185,72 @@ export function ExecutionFlowchart() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col bg-white dark:bg-slate-950 transition-colors">
-      <div className="flex flex-col md:flex-row md:h-16 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-4 md:px-6 md:py-0 items-center justify-between gap-4">
-        <div className="flex items-center gap-4 w-full md:w-auto">
-          {viewMode !== 'phases' && (
+    <div className="w-full h-screen flex flex-col bg-white dark:bg-slate-950 transition-colors overflow-hidden">
+      {/* Enhanced Professional Navbar */}
+      <header className="flex flex-col md:flex-row md:h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 md:px-8 py-3 md:py-0 items-center justify-between gap-4 z-50 shadow-sm relative">
+        <div className="flex items-center gap-6 w-full md:w-auto">
+          {/* Logo & Project Title */}
+          <div className="flex items-center gap-3 group cursor-pointer" onClick={handleBackToPhases}>
+            <div className="p-2 bg-blue-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
+              <Rocket className="w-5 h-5 text-white" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-slate-900 dark:text-white font-black text-sm md:text-lg tracking-tight leading-none">CAREER PLANNER</span>
+              <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Engineering Roadmap</span>
+            </div>
+          </div>
+
+          <div className="hidden md:block h-8 w-px bg-slate-200 dark:bg-slate-800 mx-2" />
+
+          {/* Dynamic Breadcrumb/Context */}
+          <div className="flex items-center gap-2 overflow-hidden">
             <button
-              onClick={viewMode === 'weeks' ? handleBackToMonths : handleBackToPhases}
-              className="px-3 py-1.5 md:px-4 md:py-2 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors text-xs md:text-sm shadow-sm"
+              onClick={handleBackToPhases}
+              className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500"
+              title="Phases Home"
             >
-              ← Back
+              <Home className="w-4 h-4" />
             </button>
-          )}
-          <h1 className="text-slate-900 dark:text-slate-100 font-bold text-sm md:text-base truncate">{getViewTitle()}</h1>
+            <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-700 flex-shrink-0" />
+            <h1 className="text-slate-700 dark:text-slate-300 font-semibold text-xs md:text-sm truncate max-w-[150px] md:max-w-none">
+              {getViewTitle()}
+            </h1>
+          </div>
         </div>
 
-        <div className="flex items-center gap-3 md:gap-6 w-full md:w-auto justify-between md:justify-end overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <ThemeToggle />
-            <StorageControls />
+        <div className="flex items-center gap-4 md:gap-8 w-full md:w-auto justify-between md:justify-end">
+          {/* Navigation Controls */}
+          <div className="flex items-center gap-2">
+            {viewMode !== 'phases' && (
+              <button
+                onClick={viewMode === 'weeks' ? handleBackToMonths : handleBackToPhases}
+                className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg transition-all text-[11px] font-bold border border-transparent hover:border-slate-300 dark:hover:border-slate-600"
+              >
+                BACK
+              </button>
+            )}
+
+            <button
+              onClick={handleJumpToToday}
+              className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg transition-all text-[11px] font-bold border border-blue-100 dark:border-blue-900/30 hover:bg-blue-100 dark:hover:bg-blue-900/40"
+            >
+              <Calendar className="w-3.5 h-3.5" />
+              <span className="hidden lg:inline">TODAY</span>
+            </button>
           </div>
-          <div className="hidden md:block h-8 w-px bg-slate-200 dark:bg-slate-800" />
-          <div className="flex-shrink-0">
+
+          <div className="hidden lg:block h-8 w-px bg-slate-200 dark:bg-slate-800" />
+
+          {/* Toolset */}
+          <div className="flex items-center gap-3">
             <ProgressTracker />
-          </div>
-          <div className="hidden sm:block text-[10px] md:text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">
-            View: <span className="text-slate-700 dark:text-slate-200 capitalize">{viewMode}</span>
+            <div className="flex items-center gap-1 bg-slate-100/50 dark:bg-slate-800/50 p-1 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+              <ThemeToggle />
+              <StorageControls />
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       <div className="flex-1 relative">
         {viewMode === 'weeks' && selectedMonth !== null ? (

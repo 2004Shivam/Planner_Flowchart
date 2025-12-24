@@ -24,7 +24,7 @@ The roadmap focuses on transforming a student into an elite engineering asset ca
    ```
 
 3. **Open Browser**:
-   Navigate to `http://localhost:5173`.
+   Navigate to the local URL provided by Vite (usually `http://localhost:5173` or `http://localhost:5174`).
 
 ## Architecture
 Built with **Vite + React + XYFlow**. Styling is powered by **Tailwind CSS** with a custom design system for high-stakes focus.
