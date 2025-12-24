@@ -99,29 +99,30 @@ export const phases: PhaseData[] = [
 export const monthsData: MonthData[] = [
   {
     monthNumber: 0,
-    title: 'Month 0: The Biological & Digital Reboot',
-    objective: 'Rebuild your physical and digital environment for elite engineering endurance',
+    title: 'Month 0: The Pro-Windows & Discipline Reboot',
+    objective: 'Transform your Windows machine into a world-class dev environment and reset your focus muscle',
     mode: 'risk-heavy',
     exitCriteria: [
-      'Linux (Arch/Debian) manual install verified',
-      'Router-level distraction blocking active',
-      'Terminal-only workflow established',
-      'Completed Sentinel CLI Project'
+      'WSL2 (Ubuntu) running seamlessly with Zsh',
+      'PowerShell Mastery (Piping, Streams, Environment Variables)',
+      'Digital "Kill-Switch" active on all non-essential apps',
+      'Completed Pro-Sentinel CLI (Automation Project)'
     ],
-    failureRisk: 'Treating this as a "soft" start instead of a 24/7 environment reboot',
+    failureRisk: 'Using "normal" Windows without WSL2 or Shell mastery; treating deep work as optional',
     weeks: [
       {
         weekNumber: 0,
         lanes: {
           coreBuild: [
-            { id: 'm0w0-cb1', description: 'Manual Linux Install: Arch/Debian from scratch', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Live OS' },
-            { id: 'm0w0-cb2', description: 'Partitioning Mastery: LVM, LUKS, manual fstab', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'Partition Map' }
+            { id: 'm0w0-cb1', description: 'WSL2 Gauntlet: Installing Ubuntu/Debian, kernel updates, and Vhdx management', estimatedEffort: 8, aiPolicy: 'coach-only', outputArtifact: 'WSL Console' },
+            { id: 'm0w0-cb2', description: 'Terminal Mastery: Windows Terminal setup, Fonts (Fira Code), and Zsh/Oh-My-Zsh integration', estimatedEffort: 6, aiPolicy: 'allowed', outputArtifact: 'Terminal Screenshot' },
+            { id: 'm0w0-cb3', description: 'Dev Tooling: Winget/Chocolatey setup, VS Code extensions (Remote-WSL, GitLens)', estimatedEffort: 5, aiPolicy: 'allowed', outputArtifact: 'Tooling List' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
           enforcement: [
-            { id: 'm0w0-enf1', description: 'Digital Hygiene: Social media block at router/hosts level', estimatedEffort: 5, aiPolicy: 'forbidden', outputArtifact: 'Blocked List' },
-            { id: 'm0w0-enf2', description: 'Deep Work Den: Ergonomics & zero-phone zone', estimatedEffort: 4, aiPolicy: 'forbidden', outputArtifact: 'Photo' }
+            { id: 'm0w0-enf1', description: 'Distraction Purge: Removing all social media from browser/phone', estimatedEffort: 3, aiPolicy: 'forbidden', outputArtifact: 'Confirmation' },
+            { id: 'm0w0-enf2', description: 'Router-Sentry: Setting up NextDNS or hosts-level site blocking', estimatedEffort: 5, aiPolicy: 'coach-only', outputArtifact: 'Blocklist' }
           ],
           deliverables: []
         }
@@ -130,13 +131,14 @@ export const monthsData: MonthData[] = [
         weekNumber: 1,
         lanes: {
           coreBuild: [
-            { id: 'm0w1-cb1', description: 'Terminal Citizenship: Zsh/Fish, Aliases, Dotfiles', estimatedEffort: 15, aiPolicy: 'coach-only', outputArtifact: '.zshrc' },
-            { id: 'm0w1-cb2', description: 'Stream Editing: Mastery of grep, sed, and awk basics', estimatedEffort: 12, aiPolicy: 'forbidden', outputArtifact: 'Script bundle' }
+            { id: 'm0w1-cb1', description: 'Shell Fluency: Mastering cd, ls, mkdir, rm -rf, and move in both PowerShell & Bash', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'Command Cheat-sheet' },
+            { id: 'm0w1-cb2', description: 'Pipes & Streams: Understanding stdin, stdout, stderr and ">" vs ">>" vs "|"', estimatedEffort: 8, aiPolicy: 'forbidden', outputArtifact: 'Piping Script' },
+            { id: 'm0w1-cb3', description: 'Environment Mastery: Managing PATH, Alias creation, and Profile customization', estimatedEffort: 7, aiPolicy: 'coach-only', outputArtifact: '.bashrc / $PROFILE' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
           enforcement: [
-            { id: 'm0w1-enf1', description: 'Dopamine Detox: 48h zero-screen weekend', estimatedEffort: 48, aiPolicy: 'forbidden', outputArtifact: 'Self-Reflection Essay' }
+            { id: 'm0w1-enf1', description: 'Habit Tracking: Establishing a "25-5" Pomodoro ritual for all focus hours', estimatedEffort: 5, aiPolicy: 'forbidden', outputArtifact: 'Focus Log' }
           ],
           deliverables: []
         }
@@ -145,12 +147,15 @@ export const monthsData: MonthData[] = [
         weekNumber: 2,
         lanes: {
           coreBuild: [
-            { id: 'm0w2-cb1', description: 'System Autonomy: Cron jobs & Systemd timers', estimatedEffort: 10, aiPolicy: 'coach-only', outputArtifact: 'Auto-backup script' },
-            { id: 'm0w2-cb2', description: 'Secure Access: SSH keys, hardening, port config', estimatedEffort: 8, aiPolicy: 'forbidden', outputArtifact: 'sshd_config' }
+            { id: 'm0w2-cb1', description: 'Automation Basics: Writing .bat and .sh scripts for common folder cleanups', estimatedEffort: 10, aiPolicy: 'coach-only', outputArtifact: 'Cleanup Suite' },
+            { id: 'm0w2-cb2', description: 'System Internals: Investigating Task Manager, Registry (Introduction), and Services', estimatedEffort: 6, aiPolicy: 'coach-only', outputArtifact: 'System Report' },
+            { id: 'm0w2-cb3', description: 'Cloud Gate: Setting up SSH keys (v2) for GitHub/Server access', estimatedEffort: 5, aiPolicy: 'forbidden', outputArtifact: 'Public Key' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
-          enforcement: [],
+          enforcement: [
+            { id: 'm0w2-enf1', description: '48h Brain Reset: Total digital detox (No screens for 48 hours)', estimatedEffort: 48, aiPolicy: 'forbidden', outputArtifact: 'Detox Essay' }
+          ],
           deliverables: []
         }
       },
@@ -158,13 +163,14 @@ export const monthsData: MonthData[] = [
         weekNumber: 3,
         lanes: {
           coreBuild: [
-            { id: 'm0w3-cb1', description: 'Project: Sentinel CLI (Python, local file storage)', estimatedEffort: 25, aiPolicy: 'coach-only', outputArtifact: 'Sentinel_v1', isKillerProject: true }
+            { id: 'm0w3-cb1', description: 'Project: Pro-Sentinel CLI (Python). Audits Windows/WSL health metrics and exports to JSON', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Sentinel_Pro', isKillerProject: true },
+            { id: 'm0w3-cb2', description: 'Error Handling: Implementing Try/Catch in your Sentinel scripts', estimatedEffort: 8, aiPolicy: 'coach-only', outputArtifact: 'Robust Code' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
           enforcement: [],
           deliverables: [
-            { id: 'm0w3-del1', description: 'Demo: Tracking 1 week of deep work', estimatedEffort: 2, aiPolicy: 'allowed', outputArtifact: 'Live Demo' }
+            { id: 'm0w3-del1', description: 'Demo Video: Explaining the "State" management in your CLI', estimatedEffort: 4, aiPolicy: 'allowed', outputArtifact: 'Presentation' }
           ]
         }
       }
@@ -173,22 +179,23 @@ export const monthsData: MonthData[] = [
   {
     monthNumber: 1,
     title: 'Month 1: The Computer Science Gateway',
-    objective: 'Master the machine level from transistors to protocols',
+    objective: 'Learn how data, networks, and memory actually function beneath the OS abstractions',
     mode: 'learning-heavy',
     exitCriteria: [
-      'Manual Bit-to-Char converter built',
-      'Wireshark packet analysis verified',
-      'Conflict-free Git Rebase mastery',
-      'Explain "Life of a Packet" in 5 mins'
+      'Built a Bit-to-Char-to-Pixel visualizer',
+      'Performed manual HTTP Handshake analysis',
+      'Mastered Git rebase & reflog',
+      'Detailed "Memory Map" of a Windows Process'
     ],
-    failureRisk: 'Ignoring low-level theory to rush into high-level code',
+    failureRisk: 'Ignoring low-level "boring" theory in favor of library-hunting',
     weeks: [
       {
         weekNumber: 4,
         lanes: {
           coreBuild: [
-            { id: 'm1w4-cb1', description: 'Data Rep: Binary math, Hex, Bitwise gates', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Binary ALU drawing' },
-            { id: 'm1w4-cb2', description: 'Build: Manual Base64 / ASCII converter (No libs)', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'converter.py' }
+            { id: 'm1w4-cb1', description: 'Bit-Level Logic: Logic Gates (AND/OR/NOT), Half-adders on paper', estimatedEffort: 12, aiPolicy: 'forbidden', outputArtifact: 'Gate Diagrams' },
+            { id: 'm1w4-cb2', description: 'Data Encoding: Converting binary to ASCII/UTF-8 and Hex manually', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'Workbook' },
+            { id: 'm1w4-cb3', description: 'Endianness: Understanding how Windows (Little Endian) stores multibyte integers', estimatedEffort: 8, aiPolicy: 'coach-only', outputArtifact: 'Memory Trace' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
@@ -200,8 +207,9 @@ export const monthsData: MonthData[] = [
         weekNumber: 5,
         lanes: {
           coreBuild: [
-            { id: 'm1w5-cb1', description: 'Networking: TCP State machine, SSL/TLS handshake', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Packet diagram' },
-            { id: 'm1w5-cb2', description: 'Analysis: Wireshark deep-dive on HTTPS request', estimatedEffort: 10, aiPolicy: 'allowed', outputArtifact: 'Analysis.pcap' }
+            { id: 'm1w5-cb1', description: 'Networking Internals: TCP/IP Stack, DNS resolution (the manual path)', estimatedEffort: 15, aiPolicy: 'coach-only', outputArtifact: 'DNS Trace' },
+            { id: 'm1w5-cb2', description: 'Packet Analysis: Using Wireshark on Windows to sniff a simple HTTP request', estimatedEffort: 12, aiPolicy: 'allowed', outputArtifact: 'PCAP Analysis' },
+            { id: 'm1w5-cb3', description: 'Socket Basics: Understanding Ports, IPs, and Listen/Dial logic', estimatedEffort: 10, aiPolicy: 'coach-only', outputArtifact: 'Netstat Report' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
@@ -213,8 +221,9 @@ export const monthsData: MonthData[] = [
         weekNumber: 6,
         lanes: {
           coreBuild: [
-            { id: 'm1w6-cb1', description: 'Version Control: Git Internals (Objects/Blobs)', estimatedEffort: 12, aiPolicy: 'coach-only', outputArtifact: 'Manual .git reconstruction' },
-            { id: 'm1w6-cb2', description: 'Gauntlet: 3-way complex merge resolution (CLI only)', estimatedEffort: 8, aiPolicy: 'forbidden', outputArtifact: 'Conflict Log' }
+            { id: 'm1w6-cb1', description: 'Professional Git: Objects, Hashes, and the ".git" directory anatomy', estimatedEffort: 12, aiPolicy: 'coach-only', outputArtifact: 'Exploded Repo' },
+            { id: 'm1w6-cb2', description: 'The Gauntlet: Resolving 10 artificial complex merge conflicts in CLI', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'Clean History' },
+            { id: 'm1w6-cb3', description: 'Git Recovery: Using `reflog` and `cherry-pick` to fix "broken" branches', estimatedEffort: 8, aiPolicy: 'coach-only', outputArtifact: 'Solution Log' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
@@ -226,13 +235,14 @@ export const monthsData: MonthData[] = [
         weekNumber: 7,
         lanes: {
           coreBuild: [
-            { id: 'm1w7-cb1', description: 'The Logic Blueprint: Drawing flowcharts for 5 complex algos', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Blueprint Portfolio' }
+            { id: 'm1w7-cb1', description: 'OS Core: Memory (Stack vs Heap), Process isolation, and Paging', estimatedEffort: 15, aiPolicy: 'coach-only', outputArtifact: 'OS Notes' },
+            { id: 'm1w7-cb2', description: 'Logic Blueprints: Mapping the flowchart of 5 algorithms BEFORE coding', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'The Blueprint' }
           ],
           dsaReasoning: [],
           genAiSystemDesign: [],
           enforcement: [],
           deliverables: [
-            { id: 'm1w7-del1', description: 'Essay: The Physics of a Packet', estimatedEffort: 6, aiPolicy: 'coach-only', outputArtifact: 'Scientific Writeup' }
+            { id: 'm1w7-del1', description: 'Essay: How a Byte travels from Disk to RAM on Windows', estimatedEffort: 6, aiPolicy: 'coach-only', outputArtifact: 'The Journey Essay' }
           ]
         }
       }
