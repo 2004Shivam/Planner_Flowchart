@@ -1,0 +1,13 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+@layer utilities {
+    .graph-paper {
+        background-size: 10px 10px;
+        background-image:
+            linear-gradient(to right, currentColor 1px, transparent 1px),
+            linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    }
+}
