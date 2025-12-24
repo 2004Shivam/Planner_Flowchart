@@ -56,7 +56,7 @@ export interface AIContractGate {
 }
 
 // Plan configuration
-export const PLAN_START_DATE = '2025-01-01';
+export const PLAN_START_DATE = '2025-12-24';
 
 export const phases: PhaseData[] = [
   {
