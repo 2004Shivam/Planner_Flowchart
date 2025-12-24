@@ -31,7 +31,7 @@ export function ProgressTracker() {
     // Expected progress calculation
     const start = new Date(PLAN_START_DATE);
     const now = new Date();
-    const totalDays = 365; // Simple 12-month estimate
+    const totalDays = 456; // 15-month intensive roadmap (15 * 30.4 days)
     const daysPassed = Math.max(0, (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
     setExpectedProgress(Math.min(100, Math.round((daysPassed / totalDays) * 100)));
   }, []);
