@@ -181,7 +181,7 @@ export function ExecutionFlowchart() {
       const phase = phases.find(p => p.id === selectedPhase);
       return phase?.title || '';
     }
-    return 'BSc+MCA → 15-20 LPA in 12-15 Months';
+    return 'Professional Roadmap';
   };
 
   return (
