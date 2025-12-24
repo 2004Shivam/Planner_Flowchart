@@ -1,11 +1,35 @@
+# Career Planner: 15-Month Advanced Engineering Roadmap
 
-  # Interactive Flowchart for Execution Plan
+This is a comprehensive, thesis-level career and learning execution plan designed specifically for bridging the gap between basic coding and advanced systems engineering. 
 
-  This is a code bundle for Interactive Flowchart for Execution Plan. The original project is available at https://www.figma.com/design/pG0yljdI2wvShuQfFqo8V2/Interactive-Flowchart-for-Execution-Plan.
+The roadmap focuses on transforming a student into an elite engineering asset capable of securing 15-20 LPA roles in the product-based market.
 
-  ## Running the code
+## Key Features
+- **15-Month Structured Execution**: Day-by-day, week-by-week granularity.
+- **Strict AI Governance**: Phased AI usage policies to rebuild logical reasoning.
+- **Core Skill Spine**: Deep focus on Python (fundamentals), Go (systems/concurrency), and TypeScript (production interfaces).
+- **Killer Project Portfolio**: 3 production-grade, distributed systems projects.
+- **Interactive Flowchart**: Track progress, visualize dependencies, and manage learning milestones.
 
-  Run `npm i` to install the dependencies.
+## Running Locally
 
-  Run `npm run dev` to start the development server.
-  
+1. **Install Dependencies**:
+   ```bash
+   npm i
+   ```
+
+2. **Start Dev Server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open Browser**:
+   Navigate to `http://localhost:5173`.
+
+## Architecture
+Built with **Vite + React + XYFlow**. Styling is powered by **Tailwind CSS** with a custom design system for high-stakes focus.
+
+## Philosophy
+- **Output-Driven Theory**: Learn exactly what you need to build the next module.
+- **Friction-as-a-Feature**: Struggle is deliberate to ensure deep internalization.
+- **Black Box Ban**: No using tools you haven't understood at a lower level.
