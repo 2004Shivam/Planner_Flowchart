@@ -99,34 +99,143 @@ export const phases: PhaseData[] = [
 export const monthsData: MonthData[] = [
   {
     monthNumber: 0,
-    title: 'The Biological & Digital Reboot',
-    objective: 'Rebuild your physical and digital environments for elite engineering',
+    title: 'Month 0: The Biological & Digital Reboot',
+    objective: 'Rebuild your physical and digital environment for elite engineering endurance',
     mode: 'risk-heavy',
     exitCriteria: [
-      'Linux (Arch/Debian) environment fully customized',
-      'Digital hygiene: Social media blocked at router level',
-      'Daily 4-hour Deep Work sessions established'
+      'Linux (Arch/Debian) manual install verified',
+      'Router-level distraction blocking active',
+      'Terminal-only workflow established',
+      'Completed Sentinel CLI Project'
     ],
-    failureRisk: 'Treating this as a "soft" start instead of a hard reboot',
+    failureRisk: 'Treating this as a "soft" start instead of a 24/7 environment reboot',
     weeks: [
-      { weekNumber: 0, lanes: { coreBuild: [{ id: 'm0w0-cb1', description: 'Linux Deep-Dive: File systems, Partitioning', estimatedEffort: 12, aiPolicy: 'allowed', outputArtifact: 'Partition Map' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [{ id: 'm0w0-enf1', description: 'Establish Study Den & Accountability', estimatedEffort: 5, aiPolicy: 'forbidden', outputArtifact: 'Workspace Photo' }], deliverables: [] } },
-      { weekNumber: 1, lanes: { coreBuild: [{ id: 'm0w1-cb1', description: 'Terminal Supremacy: Zsh/Fish, grep, sed, awk', estimatedEffort: 15, aiPolicy: 'coach-only', outputArtifact: '.zshrc' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [{ id: 'm0w1-enf1', description: 'Dopamine Detox: 48h zero screens', estimatedEffort: 48, aiPolicy: 'forbidden', outputArtifact: 'Essay' }], deliverables: [] } },
-      { weekNumber: 2, lanes: { coreBuild: [{ id: 'm0w2-cb1', description: 'Automation: Build local cron jobs', estimatedEffort: 10, aiPolicy: 'allowed', outputArtifact: 'Crontab scripts' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [] } },
-      { weekNumber: 3, lanes: { coreBuild: [{ id: 'm0w3-cb1', description: 'Graduation: Build "Sentinel" System Health CLI', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Sentinel CLI' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [{ id: 'm0w3-del1', description: 'Live Showcase', estimatedEffort: 4, aiPolicy: 'allowed', outputArtifact: 'Demo URL' }] } }
+      {
+        weekNumber: 0,
+        lanes: {
+          coreBuild: [
+            { id: 'm0w0-cb1', description: 'Manual Linux Install: Arch/Debian from scratch', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Live OS' },
+            { id: 'm0w0-cb2', description: 'Partitioning Mastery: LVM, LUKS, manual fstab', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'Partition Map' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [
+            { id: 'm0w0-enf1', description: 'Digital Hygiene: Social media block at router/hosts level', estimatedEffort: 5, aiPolicy: 'forbidden', outputArtifact: 'Blocked List' },
+            { id: 'm0w0-enf2', description: 'Deep Work Den: Ergonomics & zero-phone zone', estimatedEffort: 4, aiPolicy: 'forbidden', outputArtifact: 'Photo' }
+          ],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 1,
+        lanes: {
+          coreBuild: [
+            { id: 'm0w1-cb1', description: 'Terminal Citizenship: Zsh/Fish, Aliases, Dotfiles', estimatedEffort: 15, aiPolicy: 'coach-only', outputArtifact: '.zshrc' },
+            { id: 'm0w1-cb2', description: 'Stream Editing: Mastery of grep, sed, and awk basics', estimatedEffort: 12, aiPolicy: 'forbidden', outputArtifact: 'Script bundle' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [
+            { id: 'm0w1-enf1', description: 'Dopamine Detox: 48h zero-screen weekend', estimatedEffort: 48, aiPolicy: 'forbidden', outputArtifact: 'Self-Reflection Essay' }
+          ],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 2,
+        lanes: {
+          coreBuild: [
+            { id: 'm0w2-cb1', description: 'System Autonomy: Cron jobs & Systemd timers', estimatedEffort: 10, aiPolicy: 'coach-only', outputArtifact: 'Auto-backup script' },
+            { id: 'm0w2-cb2', description: 'Secure Access: SSH keys, hardening, port config', estimatedEffort: 8, aiPolicy: 'forbidden', outputArtifact: 'sshd_config' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 3,
+        lanes: {
+          coreBuild: [
+            { id: 'm0w3-cb1', description: 'Project: Sentinel CLI (Python, local file storage)', estimatedEffort: 25, aiPolicy: 'coach-only', outputArtifact: 'Sentinel_v1', isKillerProject: true }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: [
+            { id: 'm0w3-del1', description: 'Demo: Tracking 1 week of deep work', estimatedEffort: 2, aiPolicy: 'allowed', outputArtifact: 'Live Demo' }
+          ]
+        }
+      }
     ]
   },
   {
     monthNumber: 1,
-    title: 'The Computer Science Gateway',
-    objective: 'Understand the machine from the transistor to the protocol',
+    title: 'Month 1: The Computer Science Gateway',
+    objective: 'Master the machine level from transistors to protocols',
     mode: 'learning-heavy',
-    exitCriteria: ['Explain RAM-to-CPU data flow', 'Git CLI mastery', 'Packet trace analysis'],
-    failureRisk: 'Rushing to code before understanding bits/bytes',
+    exitCriteria: [
+      'Manual Bit-to-Char converter built',
+      'Wireshark packet analysis verified',
+      'Conflict-free Git Rebase mastery',
+      'Explain "Life of a Packet" in 5 mins'
+    ],
+    failureRisk: 'Ignoring low-level theory to rush into high-level code',
     weeks: [
-      { weekNumber: 4, lanes: { coreBuild: [{ id: 'm1w4-cb1', description: 'Data Rep: Binary, Hex, ASCII, UTF-8', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Converter Tool' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [] } },
-      { weekNumber: 5, lanes: { coreBuild: [{ id: 'm1w5-cb1', description: 'Networking: TCP/IP, DNS, SSL/TLS', estimatedEffort: 20, aiPolicy: 'forbidden', outputArtifact: 'Analysis Doc' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [] } },
-      { weekNumber: 6, lanes: { coreBuild: [{ id: 'm1w6-cb1', description: 'Pro-Git: Rebase, Squash, Bisect', estimatedEffort: 12, aiPolicy: 'forbidden', outputArtifact: 'Clean History' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [] } },
-      { weekNumber: 7, lanes: { coreBuild: [{ id: 'm1w7-cb1', description: 'Logic Flow: Hand-drawing 10 algo flows', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Portfolio' }], dsaReasoning: [], genAiSystemDesign: [], enforcement: [], deliverables: [{ id: 'm1w7-del1', description: 'Essay: Life of a Packet', estimatedEffort: 6, aiPolicy: 'coach-only', outputArtifact: 'Blog Post' }] } }
+      {
+        weekNumber: 4,
+        lanes: {
+          coreBuild: [
+            { id: 'm1w4-cb1', description: 'Data Rep: Binary math, Hex, Bitwise gates', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Binary ALU drawing' },
+            { id: 'm1w4-cb2', description: 'Build: Manual Base64 / ASCII converter (No libs)', estimatedEffort: 10, aiPolicy: 'forbidden', outputArtifact: 'converter.py' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 5,
+        lanes: {
+          coreBuild: [
+            { id: 'm1w5-cb1', description: 'Networking: TCP State machine, SSL/TLS handshake', estimatedEffort: 20, aiPolicy: 'coach-only', outputArtifact: 'Packet diagram' },
+            { id: 'm1w5-cb2', description: 'Analysis: Wireshark deep-dive on HTTPS request', estimatedEffort: 10, aiPolicy: 'allowed', outputArtifact: 'Analysis.pcap' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 6,
+        lanes: {
+          coreBuild: [
+            { id: 'm1w6-cb1', description: 'Version Control: Git Internals (Objects/Blobs)', estimatedEffort: 12, aiPolicy: 'coach-only', outputArtifact: 'Manual .git reconstruction' },
+            { id: 'm1w6-cb2', description: 'Gauntlet: 3-way complex merge resolution (CLI only)', estimatedEffort: 8, aiPolicy: 'forbidden', outputArtifact: 'Conflict Log' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: []
+        }
+      },
+      {
+        weekNumber: 7,
+        lanes: {
+          coreBuild: [
+            { id: 'm1w7-cb1', description: 'The Logic Blueprint: Drawing flowcharts for 5 complex algos', estimatedEffort: 15, aiPolicy: 'forbidden', outputArtifact: 'Blueprint Portfolio' }
+          ],
+          dsaReasoning: [],
+          genAiSystemDesign: [],
+          enforcement: [],
+          deliverables: [
+            { id: 'm1w7-del1', description: 'Essay: The Physics of a Packet', estimatedEffort: 6, aiPolicy: 'coach-only', outputArtifact: 'Scientific Writeup' }
+          ]
+        }
+      }
     ]
   },
   {
